@@ -1,0 +1,20 @@
+{
+  "name": "student-notes-exchange",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Student Notes Exchange — Share, discover, and download academic notes",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "chart.js": "^4.5.1",
+    "firebase": "^12.14.0"
+  }
+}

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Notes Exchange — Your Campus, Your Notes, Your Community</title>
+  <meta name="description" content="Join 10,000+ college students sharing academic notes, chatting with classmates, tracking study groups, and acing exams together. Upload PDFs, find study buddies, earn badges — all in one platform.">
+  <meta name="keywords" content="student notes, college notes, study materials, academic notes, note sharing, exam preparation, study groups, campus chat, location tracking">
+  <meta name="author" content="Student Notes Exchange">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Student Notes Exchange — Your Campus, Your Notes, Your Community">
+  <meta property="og:description" content="Share notes, chat with classmates, track study groups, and ace your exams — all in one platform trusted by 10,000+ students.">
+  <meta property="og:url" content="https://studentnotesexchange.com">
+  <meta property="og:site_name" content="Student Notes Exchange">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Student Notes Exchange — Your Campus, Your Notes, Your Community">
+  <meta name="twitter:description" content="Share notes, chat with classmates, track study groups, and ace your exams — all in one platform.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://studentnotesexchange.com">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./src/css/variables.css">
+  <link rel="stylesheet" href="./src/css/base.css">
+  <link rel="stylesheet" href="./src/css/components.css">
+  <link rel="stylesheet" href="./src/css/animations.css">
+  <link rel="stylesheet" href="./src/css/themes.css">
+  <link rel="stylesheet" href="./src/css/landing.css">
+  <link rel="stylesheet" href="./src/css/responsive.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       1. STICKY NAVIGATION BAR
+       ═══════════════════════════════════════════ -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand" aria-label="Student Notes Exchange — Home">
+        <span class="nav-logo">📚 SNE</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="#features" class="nav-link" role="menuitem">Features</a></li>
+        <li role="none"><a href="#how-it-works" class="nav-link" role="menuitem">How It Works</a></li>
+        <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
+        <li role="none"><a href="#app-preview" class="nav-link" role="menuitem">Preview</a></li>
+
+        <!-- Mobile-only auth actions -->
+        <li class="nav-actions-mobile" role="none">
+          <button class="btn btn-ghost" data-auth="signin">Sign In</button>
+          <button class="btn btn-primary" data-auth="signup">Get Started</button>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+          <span class="theme-icon icon-sun" aria-hidden="true">☀️</span>
+          <span class="theme-icon icon-moon" aria-hidden="true">🌙</span>
+        </button>
+        <button class="btn btn-ghost btn-sm" data-auth="signin">Sign In</button>
+        <button class="btn btn-primary btn-sm" data-auth="signup">Get Started</button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile overlay -->
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  </nav>
+
+
+  <main>
+    <!-- ═══════════════════════════════════════════
+         2. HERO SECTION
+         ═══════════════════════════════════════════ -->
+    <section class="hero section" id="hero" aria-labelledby="hero-heading">
+
+      <!-- Animated gradient mesh background -->
+      <div class="hero-mesh" aria-hidden="true"></div>
+
+      <!-- Floating decorative shapes -->
+      <div class="hero-shapes" aria-hidden="true" id="hero-shapes">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+        <div class="floating-shape shape-6"></div>
+      </div>
+
+      <div class="container hero-content">
+        <span class="hero-badge reveal">
+          🚀 Trusted by 10,000+ Students Across India
+        </span>
+
+        <h1 id="hero-heading" class="hero-title reveal">
+          Your Campus, Your Notes,<br>Your <span class="gradient-text">Community</span>
+        </h1>
+
+        <p class="hero-subtitle reveal">
+          Share notes, chat with classmates, track study groups, and ace your exams — all in one platform.
+        </p>
+
+        <!-- Search bar -->
+        <form class="hero-search reveal" id="hero-search-form" role="search" aria-label="Search notes">
+          <div class="search-input-group">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input
+              type="search"
+              id="hero-search-input"
+              placeholder="Search notes by subject, semester, or college..."
+              autocomplete="off"
+              aria-label="Search for notes by subject or topic"
+            >
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </form>
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons reveal">
+          <button class="btn btn-primary btn-lg" data-auth="signup">
+            🎓 Join Free
+          </button>
+          <a href="./app.html#browse" class="btn btn-secondary btn-lg">
+            📚 Browse Notes
+          </a>
+        </div>
+
+        <!-- Trust indicators -->
+        <div class="hero-trust reveal">
+          <span class="hero-trust-item">✅ 100% Free</span>
+          <span class="hero-trust-item">🔒 Secure</span>
+          <span class="hero-trust-item">⚡ Instant Access</span>
+          <span class="hero-trust-item">📍 Location Enabled</span>
+        </div>
+      </div>
+
+      <!-- Scroll down indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll to explore</span>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         3. WHAT IS SNE? (App Overview)
+         ═══════════════════════════════════════════ -->
+    <section class="section overview-section" id="overview" aria-labelledby="overview-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="overview-heading" class="section-title reveal">Everything You Need to <span class="gradient-text">Ace Your Exams</span></h2>
+          <p class="section-subtitle reveal">
+            Student Notes Exchange (SNE) is the ultimate academic companion built by students, for students. Whether you need notes from last semester's topper, a study buddy in your library, or a group chat for exam prep — SNE brings your entire campus together in one powerful platform.
+          </p>
+        </header>
+
+        <div class="overview-grid">
+          <article class="glass-card overview-card reveal">
+            <div class="overview-icon-wrap">
+              <span class="overview-icon">📝</span>
+            </div>
+            <h3 class="overview-title">Share & Discover Notes</h3>
+            <p class="overview-desc">Upload PDFs, DOCX, images, and presentations. Find notes by subject, semester, or college. Preview documents before downloading. Build your personal study library with bookmarks.</p>
+            <ul class="overview-features">
+              <li>📄 Support for PDFs, DOCX, Images</li>
+              <li>🏷️ Organized by Subject & Semester</li>
+              <li>👁️ Preview Before Download</li>
+            </ul>
+          </article>
+
+          <article class="glass-card overview-card reveal">
+            <div class="overview-icon-wrap">
+              <span class="overview-icon">💬</span>
+            </div>
+            <h3 class="overview-title">Chat & Connect</h3>
+            <p class="overview-desc">Real-time messaging with classmates and seniors. Create study groups for every subject. Share files directly in chat. Voice notes support for quick explanations and discussions.</p>
+            <ul class="overview-features">
+              <li>⚡ Real-time Encrypted Messaging</li>
+              <li>👥 Study Groups & DMs</li>
+              <li>📎 File & Voice Note Sharing</li>
+            </ul>
+          </article>
+
+          <article class="glass-card overview-card reveal">
+            <div class="overview-icon-wrap">
+              <span class="overview-icon">📍</span>
+            </div>
+            <h3 class="overview-title">Find Study Buddies</h3>
+            <p class="overview-desc">See nearby students studying the same subjects. Location-based discovery helps you find study partners in your library, campus café, or hostel. Coordinate study meetups effortlessly.</p>
+            <ul class="overview-features">
+              <li>🗺️ Nearby Student Discovery</li>
+              <li>🏫 Campus-based Matching</li>
+              <li>📅 Study Meetup Coordination</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         4. FEATURES SHOWCASE
+         ═══════════════════════════════════════════ -->
+    <section class="section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="features-heading" class="section-title reveal">Packed with Features <span class="gradient-text">Students Love</span></h2>
+          <p class="section-subtitle reveal">
+            From smart search to AI-powered tools, every feature is designed to make studying easier and more collaborative.
+          </p>
+        </header>
+
+        <div class="features-grid">
+          <article class="glass-card feature-card animate-on-scroll">
+            <div class="feature-icon-glow"></div>
+            <div class="emoji-icon">📤</div>
+            <h3 class="card-title">Upload & Share</h3>
+            <p class="card-desc">Drag & drop PDFs, images, presentations. Organize by subject & semester. Help juniors while building your profile.</p>
+          </article>
+
+          <article class="glass-card feature-card animate-on-scroll">
+            <div class="feature-icon-glow"></div>
+            <div class="emoji-icon">🔍</div>
+            <h3 class="card-title">Smart Search</h3>
+            <p class="card-desc">Full-text search across thousands of notes. Filter by college, department, rating. Find exactly what you need in seconds.</p>
+          </article>
+
+          <article class="glass-card feature-card animate-on-scroll">
+            <div class="feature-icon-glow"></div>
+            <div class="emoji-icon">⭐</div>
+            <h3 class="card-title">Ratings & Reviews</h3>
+            <p class="card-desc">5-star community ratings. Read reviews before downloading. Quality-assured content that rises to the top.</p>
+          </article>
+
+          <article class="glass-card feature-card animate-on-scroll">
+            <div class="feature-icon-glow"></div>
+            <div class="emoji-icon">💬</div>
+            <h3 class="card-title">Live Chat</h3>
+            <p class="card-desc">Real-time messaging with encryption. Group chats, direct messages, and file sharing all in one place.</p>
+          </article>
+
+          <article class="glass-card feature-card animate-on-scroll">
+            <div class="feature-icon-glow"></div>
+            <div class="emoji-icon">📍</div>
+            <h3 class="card-title">Location Tracking</h3>
+            <p class="card-desc">Find study buddies nearby. See who's in your library or campus café. Coordinate meetups with privacy controls.</p>
+          </article>
+
+          <article class="glass-card feature-card animate-on-scroll">
+            <div class="feature-icon-glow"></div>
+            <div class="emoji-icon">🏆</div>
+            <h3 class="card-title">Gamification</h3>
+            <p class="card-desc">Earn badges: Top Contributor, Subject Expert, Campus Hero. Build your reputation and climb the leaderboard.</p>
+          </article>
+
+          <article class="glass-card feature-card animate-on-scroll">
+            <div class="feature-icon-glow"></div>
+            <div class="emoji-icon">📊</div>
+            <h3 class="card-title">Analytics Dashboard</h3>
+            <p class="card-desc">Track your uploads, downloads, and ratings. See your impact on the community with beautiful charts.</p>
+          </article>
+
+          <article class="glass-card feature-card animate-on-scroll">
+            <div class="feature-icon-glow"></div>
+            <div class="emoji-icon">🤖</div>
+            <h3 class="card-title">AI Features</h3>
+            <p class="card-desc">AI-powered summaries, flashcards, and quiz generator. Study smarter with automated tools.</p>
+            <span class="badge badge-coming-soon">🚧 Coming Soon</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         5. HOW IT WORKS
+         ═══════════════════════════════════════════ -->
+    <section class="section how-it-works" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="how-heading" class="section-title reveal">How It Works</h2>
+          <p class="section-subtitle reveal">
+            Get started in four simple steps — it takes less than a minute.
+          </p>
+        </header>
+
+        <div class="steps-grid">
+          <div class="steps-connector" aria-hidden="true">
+            <div class="connector-line"></div>
+          </div>
+
+          <article class="step-card animate-on-scroll">
+            <div class="step-number-wrap">
+              <span class="step-num">1</span>
+              <span class="step-emoji">📝</span>
+            </div>
+            <span class="step-label">Step 1</span>
+            <h3 class="step-title">Create Account</h3>
+            <p class="step-desc">Sign up with email or Google in 30 seconds. Completely free — no credit card needed.</p>
+          </article>
+
+          <article class="step-card animate-on-scroll">
+            <div class="step-number-wrap">
+              <span class="step-num">2</span>
+              <span class="step-emoji">📤</span>
+            </div>
+            <span class="step-label">Step 2</span>
+            <h3 class="step-title">Upload or Browse</h3>
+            <p class="step-desc">Share your notes or find what you need. Search by subject, semester, or college.</p>
+          </article>
+
+          <article class="step-card animate-on-scroll">
+            <div class="step-number-wrap">
+              <span class="step-num">3</span>
+              <span class="step-emoji">💬</span>
+            </div>
+            <span class="step-label">Step 3</span>
+            <h3 class="step-title">Connect & Chat</h3>
+            <p class="step-desc">Message classmates, join study groups, find study buddies near your campus.</p>
+          </article>
+
+          <article class="step-card animate-on-scroll">
+            <div class="step-number-wrap">
+              <span class="step-num">4</span>
+              <span class="step-emoji">🏆</span>
+            </div>
+            <span class="step-label">Step 4</span>
+            <h3 class="step-title">Earn & Grow</h3>
+            <p class="step-desc">Get rated, earn badges, build your reputation. Become a campus hero!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         6. STATS BAR
+         ═══════════════════════════════════════════ -->
+    <section class="stats-bar" id="stats-bar" aria-label="Platform statistics">
+      <div class="container">
+        <div class="stats-inner reveal">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" data-target="50000" data-suffix="+">0</div>
+              <div class="stat-label">Notes Shared</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10000" data-suffix="+">0</div>
+              <div class="stat-label">Active Students</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="500" data-suffix="+">0</div>
+              <div class="stat-label">Colleges</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="1000000" data-suffix="+">0</div>
+              <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="4.8" data-suffix="★" data-decimals="1">0</div>
+              <div class="stat-label">Average Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         7. APP PREVIEW SECTION
+         ═══════════════════════════════════════════ -->
+    <section class="section app-preview-section" id="app-preview" aria-labelledby="preview-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="preview-heading" class="section-title reveal">See SNE <span class="gradient-text">in Action</span></h2>
+          <p class="section-subtitle reveal">
+            Get a sneak peek at the dashboard you'll love using every day.
+          </p>
+        </header>
+
+        <!-- CSS-only Dashboard Mockup -->
+        <div class="app-mockup reveal">
+          <div class="mockup-window">
+            <div class="mockup-titlebar">
+              <div class="mockup-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="mockup-url">studentnotesexchange.com/dashboard</div>
+            </div>
+            <div class="mockup-body">
+              <!-- Sidebar -->
+              <aside class="mockup-sidebar">
+                <div class="mockup-logo">📚 SNE</div>
+                <div class="mockup-nav-item active">📊 Dashboard</div>
+                <div class="mockup-nav-item">📝 My Notes</div>
+                <div class="mockup-nav-item">🔍 Browse</div>
+                <div class="mockup-nav-item">💬 Chat</div>
+                <div class="mockup-nav-item">📍 Nearby</div>
+                <div class="mockup-nav-item">🏆 Leaderboard</div>
+                <div class="mockup-nav-item">⚙️ Settings</div>
+              </aside>
+
+              <!-- Main content -->
+              <div class="mockup-main">
+                <!-- Header -->
+                <div class="mockup-header">
+                  <div class="mockup-search-bar">
+                    <span>🔍</span>
+                    <span class="mockup-placeholder">Search notes, subjects, people...</span>
+                  </div>
+                  <div class="mockup-user">
+                    <span class="mockup-bell">🔔</span>
+                    <div class="mockup-avatar-sm">PS</div>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="mockup-content">
+                  <!-- Stats row -->
+                  <div class="mockup-stats-row">
+                    <div class="mockup-stat-card">
+                      <span class="mockup-stat-icon">📤</span>
+                      <div>
+                        <div class="mockup-stat-val">127</div>
+                        <div class="mockup-stat-lbl">Uploads</div>
+                      </div>
+                    </div>
+                    <div class="mockup-stat-card">
+                      <span class="mockup-stat-icon">⬇️</span>
+                      <div>
+                        <div class="mockup-stat-val">2,450</div>
+                        <div class="mockup-stat-lbl">Downloads</div>
+                      </div>
+                    </div>
+                    <div class="mockup-stat-card">
+                      <span class="mockup-stat-icon">⭐</span>
+                      <div>
+                        <div class="mockup-stat-val">4.9</div>
+                        <div class="mockup-stat-lbl">Rating</div>
+                      </div>
+                    </div>
+                    <div class="mockup-stat-card">
+                      <span class="mockup-stat-icon">🏆</span>
+                      <div>
+                        <div class="mockup-stat-val">#3</div>
+                        <div class="mockup-stat-lbl">Rank</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Note cards row -->
+                  <div class="mockup-section-title">Recent Notes</div>
+                  <div class="mockup-notes-row">
+                    <div class="mockup-note-card">
+                      <div class="mockup-note-thumb">📄</div>
+                      <div class="mockup-note-title">Data Structures Unit 3</div>
+                      <div class="mockup-note-meta">⭐ 4.8 · 234 downloads</div>
+                    </div>
+                    <div class="mockup-note-card">
+                      <div class="mockup-note-thumb">📄</div>
+                      <div class="mockup-note-title">Organic Chemistry Notes</div>
+                      <div class="mockup-note-meta">⭐ 4.6 · 189 downloads</div>
+                    </div>
+                    <div class="mockup-note-card">
+                      <div class="mockup-note-thumb">📄</div>
+                      <div class="mockup-note-title">Linear Algebra Complete</div>
+                      <div class="mockup-note-meta">⭐ 4.9 · 312 downloads</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         8. POPULAR SUBJECTS
+         ═══════════════════════════════════════════ -->
+    <section class="section" id="popular-subjects" aria-labelledby="subjects-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="subjects-heading" class="section-title reveal">Popular <span class="gradient-text">Subjects</span></h2>
+          <p class="section-subtitle reveal">
+            Browse notes across the most in-demand academic subjects.
+          </p>
+        </header>
+
+        <div class="subjects-grid">
+          <a href="./app.html#browse?subject=mathematics" class="subject-card animate-on-scroll">
+            <span class="subject-emoji">📐</span>
+            <div class="subject-info">
+              <span class="subject-name">Mathematics</span>
+              <span class="subject-count">8,200+ notes</span>
+            </div>
+          </a>
+
+          <a href="./app.html#browse?subject=physics" class="subject-card animate-on-scroll">
+            <span class="subject-emoji">⚛️</span>
+            <div class="subject-info">
+              <span class="subject-name">Physics</span>
+              <span class="subject-count">6,500+ notes</span>
+            </div>
+          </a>
+
+          <a href="./app.html#browse?subject=computer-science" class="subject-card animate-on-scroll">
+            <span class="subject-emoji">💻</span>
+            <div class="subject-info">
+              <span class="subject-name">Computer Science</span>
+              <span class="subject-count">9,100+ notes</span>
+            </div>
+          </a>
+
+          <a href="./app.html#browse?subject=chemistry" class="subject-card animate-on-scroll">
+            <span class="subject-emoji">🧪</span>
+            <div class="subject-info">
+              <span class="subject-name">Chemistry</span>
+              <span class="subject-count">5,800+ notes</span>
+            </div>
+          </a>
+
+          <a href="./app.html#browse?subject=biology" class="subject-card animate-on-scroll">
+            <span class="subject-emoji">🧬</span>
+            <div class="subject-info">
+              <span class="subject-name">Biology</span>
+              <span class="subject-count">4,700+ notes</span>
+            </div>
+          </a>
+
+          <a href="./app.html#browse?subject=economics" class="subject-card animate-on-scroll">
+            <span class="subject-emoji">📊</span>
+            <div class="subject-info">
+              <span class="subject-name">Economics</span>
+              <span class="subject-count">3,900+ notes</span>
+            </div>
+          </a>
+
+          <a href="./app.html#browse?subject=english-literature" class="subject-card animate-on-scroll">
+            <span class="subject-emoji">📝</span>
+            <div class="subject-info">
+              <span class="subject-name">English Literature</span>
+              <span class="subject-count">3,200+ notes</span>
+            </div>
+          </a>
+
+          <a href="./app.html#browse?subject=history" class="subject-card animate-on-scroll">
+            <span class="subject-emoji">🏛️</span>
+            <div class="subject-info">
+              <span class="subject-name">History</span>
+              <span class="subject-count">2,800+ notes</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         9. TOP CONTRIBUTORS
+         ═══════════════════════════════════════════ -->
+    <section class="section" id="top-contributors" aria-labelledby="contributors-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="contributors-heading" class="section-title reveal">Top <span class="gradient-text">Contributors</span></h2>
+          <p class="section-subtitle reveal">
+            Meet the students making a difference — our most active and highly-rated note sharers.
+          </p>
+        </header>
+
+        <div class="contributors-grid">
+          <article class="glass-card contributor-card animate-on-scroll">
+            <div class="contributor-avatar">
+              <div class="avatar avatar-lg" style="background: linear-gradient(135deg, #6366f1, #a78bfa);">PS</div>
+              <span class="contributor-rank">🥇</span>
+            </div>
+            <h3 class="contributor-name">Priya Sharma</h3>
+            <p class="contributor-college">Delhi University</p>
+            <div class="contributor-badges">
+              <span class="mini-badge">🏆 Top Contributor</span>
+              <span class="mini-badge">📝 Subject Expert</span>
+            </div>
+            <div class="contributor-stats">
+              <div class="contributor-stat">
+                <span class="contributor-stat-value">2,450</span>
+                <span class="contributor-stat-label">Points</span>
+              </div>
+              <div class="contributor-stat">
+                <span class="contributor-stat-value">127</span>
+                <span class="contributor-stat-label">Uploads</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card contributor-card animate-on-scroll">
+            <div class="contributor-avatar">
+              <div class="avatar avatar-lg" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">RV</div>
+              <span class="contributor-rank">🥈</span>
+            </div>
+            <h3 class="contributor-name">Rahul Verma</h3>
+            <p class="contributor-college">IIT Bombay</p>
+            <div class="contributor-badges">
+              <span class="mini-badge">⭐ Campus Hero</span>
+            </div>
+            <div class="contributor-stats">
+              <div class="contributor-stat">
+                <span class="contributor-stat-value">2,180</span>
+                <span class="contributor-stat-label">Points</span>
+              </div>
+              <div class="contributor-stat">
+                <span class="contributor-stat-value">98</span>
+                <span class="contributor-stat-label">Uploads</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card contributor-card animate-on-scroll">
+            <div class="contributor-avatar">
+              <div class="avatar avatar-lg" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">AG</div>
+              <span class="contributor-rank">🥉</span>
+            </div>
+            <h3 class="contributor-name">Ananya Gupta</h3>
+            <p class="contributor-college">BITS Pilani</p>
+            <div class="contributor-badges">
+              <span class="mini-badge">📚 Prolific Sharer</span>
+            </div>
+            <div class="contributor-stats">
+              <div class="contributor-stat">
+                <span class="contributor-stat-value">1,920</span>
+                <span class="contributor-stat-label">Points</span>
+              </div>
+              <div class="contributor-stat">
+                <span class="contributor-stat-value">85</span>
+                <span class="contributor-stat-label">Uploads</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card contributor-card animate-on-scroll">
+            <div class="contributor-avatar">
+              <div class="avatar avatar-lg" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">AP</div>
+              <span class="contributor-rank">4</span>
+            </div>
+            <h3 class="contributor-name">Arjun Patel</h3>
+            <p class="contributor-college">NIT Trichy</p>
+            <div class="contributor-badges">
+              <span class="mini-badge">🔥 Rising Star</span>
+            </div>
+            <div class="contributor-stats">
+              <div class="contributor-stat">
+                <span class="contributor-stat-value">1,750</span>
+                <span class="contributor-stat-label">Points</span>
+              </div>
+              <div class="contributor-stat">
+                <span class="contributor-stat-value">76</span>
+                <span class="contributor-stat-label">Uploads</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         10. TESTIMONIALS
+         ═══════════════════════════════════════════ -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="testimonials-heading" class="section-title reveal">What Students <span class="gradient-text">Say</span></h2>
+          <p class="section-subtitle reveal">
+            Don't just take our word for it — hear from students who use SNE every day.
+          </p>
+        </header>
+
+        <div class="testimonials-grid">
+          <article class="glass-card testimonial-card animate-on-scroll">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-quote">
+              "Found all my semester notes in one place. The chat feature helped me connect with seniors who shared golden tips for my exams. This platform saved my GPA!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="avatar" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">SK</div>
+              <div>
+                <div class="testimonial-author-name">Sneha K.</div>
+                <div class="testimonial-author-info">3rd Year CSE, Mumbai University</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card testimonial-card animate-on-scroll">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-quote">
+              "I uploaded my notes and got amazing feedback. The gamification system and badges keep me motivated. Love the location feature — found study partners in my library!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">VS</div>
+              <div>
+                <div class="testimonial-author-name">Vikram S.</div>
+                <div class="testimonial-author-info">4th Year ECE, VIT Vellore</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass-card testimonial-card animate-on-scroll">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-quote">
+              "The search filters are incredible. I can find exactly what I need by subject and semester. The study group chat feature is a game-changer for exam prep!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="avatar" style="background: linear-gradient(135deg, #22c55e, #10b981);">MR</div>
+              <div>
+                <div class="testimonial-author-name">Meera R.</div>
+                <div class="testimonial-author-info">2nd Year BBA, Christ University</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         11. SAFETY & TRUST
+         ═══════════════════════════════════════════ -->
+    <section class="section safety-section" id="safety" aria-labelledby="safety-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="safety-heading" class="section-title reveal">Your Safety <span class="gradient-text">Matters</span></h2>
+          <p class="section-subtitle reveal">
+            We take security and privacy seriously. Your data and identity are protected at every level.
+          </p>
+        </header>
+
+        <div class="safety-grid">
+          <article class="glass-card safety-card animate-on-scroll">
+            <div class="safety-icon">🔒</div>
+            <h3 class="safety-title">End-to-End Encryption</h3>
+            <p class="safety-desc">All chats and file transfers are encrypted. Your conversations stay private between you and your peers.</p>
+          </article>
+
+          <article class="glass-card safety-card animate-on-scroll">
+            <div class="safety-icon">👤</div>
+            <h3 class="safety-title">Verified Students Only</h3>
+            <p class="safety-desc">College email verification ensures only real students can join. A safe, trusted academic community.</p>
+          </article>
+
+          <article class="glass-card safety-card animate-on-scroll">
+            <div class="safety-icon">📍</div>
+            <h3 class="safety-title">Location Privacy Controls</h3>
+            <p class="safety-desc">Full control over your location visibility. Share your location only when you want, with who you want.</p>
+          </article>
+
+          <article class="glass-card safety-card animate-on-scroll">
+            <div class="safety-icon">🛡️</div>
+            <h3 class="safety-title">Content Moderation</h3>
+            <p class="safety-desc">AI-powered content review and human moderators ensure only quality academic content is shared.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         12. CTA SECTION
+         ═══════════════════════════════════════════ -->
+    <section class="section cta-section" id="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-inner reveal">
+
+          <!-- Decorative shapes -->
+          <div class="cta-shapes" aria-hidden="true">
+            <div class="cta-shape cta-shape-1"></div>
+            <div class="cta-shape cta-shape-2"></div>
+            <div class="cta-shape cta-shape-3"></div>
+          </div>
+
+          <div class="cta-content">
+            <span class="cta-emoji" aria-hidden="true">🎓</span>
+            <h2 id="cta-heading" class="cta-title">Ready to Transform Your <span class="gradient-text">Study Experience</span>?</h2>
+            <p class="cta-subtitle">
+              Join 10,000+ students who are already sharing and learning together. It's completely free.
+            </p>
+            <div class="cta-buttons">
+              <button class="btn btn-primary btn-lg cta-primary-btn" data-auth="signup">
+                🚀 Create Free Account
+              </button>
+              <a href="#overview" class="btn btn-secondary btn-lg">
+                📖 Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════
+       13. FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="site-footer" id="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="/" class="nav-brand" aria-label="Student Notes Exchange — Home">
+            <span class="nav-logo">📚 SNE</span>
+          </a>
+          <p class="footer-brand-desc">
+            The #1 platform for sharing academic notes among college students. Share notes, chat with classmates, find study buddies, and study smarter — together.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Twitter / X">🐦</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="#" aria-label="GitHub">🐙</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <nav class="footer-column" aria-label="Quick links">
+          <h3 class="footer-column-title">Quick Links</h3>
+          <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="./app.html#browse">Browse Notes</a>
+            <a href="./app.html#upload">Upload</a>
+            <a href="./app.html#dashboard">Dashboard</a>
+            <a href="./app.html#chat">Chat</a>
+          </div>
+        </nav>
+
+        <!-- Features -->
+        <nav class="footer-column" aria-label="Features">
+          <h3 class="footer-column-title">Features</h3>
+          <div class="footer-links">
+            <a href="#features">Note Sharing</a>
+            <a href="#features">Live Chat</a>
+            <a href="#features">Location Tracking</a>
+            <a href="#features">Gamification</a>
+            <a href="#features">AI Tools</a>
+          </div>
+        </nav>
+
+        <!-- Support -->
+        <nav class="footer-column" aria-label="Support links">
+          <h3 class="footer-column-title">Support</h3>
+          <div class="footer-links">
+            <a href="#">Help Center</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Student Notes Exchange. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════
+       14. AUTH MODAL
+       ═══════════════════════════════════════════ -->
+  <!-- Sign In Modal -->
+  <div class="auth-modal-overlay" id="signin-modal" aria-hidden="true" role="dialog" aria-labelledby="signin-title">
+    <div class="auth-modal glass-card">
+      <button class="auth-modal-close" aria-label="Close sign in modal">&times;</button>
+      <div class="auth-modal-header">
+        <span class="auth-modal-logo">📚</span>
+        <h2 id="signin-title" class="auth-modal-title">Welcome Back</h2>
+        <p class="auth-modal-subtitle">Sign in to your account to continue</p>
+      </div>
+      <form class="auth-form" id="signin-form">
+        <div class="auth-field">
+          <label for="signin-email">Email</label>
+          <input type="email" id="signin-email" placeholder="you@university.edu" required autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="signin-password">Password</label>
+          <input type="password" id="signin-password" placeholder="Enter your password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg auth-submit">Sign In</button>
+        <div class="auth-divider">
+          <span>or continue with</span>
+        </div>
+        <button type="button" class="btn btn-google" id="signin-google">
+          <span class="google-icon">G</span>
+          Continue with Google
+        </button>
+        <p class="auth-switch">
+          Don't have an account? <button type="button" class="auth-switch-btn" data-auth="signup">Sign Up</button>
+        </p>
+      </form>
+      <div class="auth-error" id="signin-error" role="alert"></div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="auth-modal-overlay" id="signup-modal" aria-hidden="true" role="dialog" aria-labelledby="signup-title">
+    <div class="auth-modal glass-card">
+      <button class="auth-modal-close" aria-label="Close sign up modal">&times;</button>
+      <div class="auth-modal-header">
+        <span class="auth-modal-logo">🎓</span>
+        <h2 id="signup-title" class="auth-modal-title">Create Account</h2>
+        <p class="auth-modal-subtitle">Join 10,000+ students learning together</p>
+      </div>
+      <form class="auth-form" id="signup-form">
+        <div class="auth-field">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" placeholder="Your full name" required autocomplete="name">
+        </div>
+        <div class="auth-field">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="you@university.edu" required autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Create a password (min 6 chars)" required minlength="6" autocomplete="new-password">
+        </div>
+        <div class="auth-field">
+          <label for="signup-confirm">Confirm Password</label>
+          <input type="password" id="signup-confirm" placeholder="Confirm your password" required minlength="6" autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg auth-submit">Create Account</button>
+        <div class="auth-divider">
+          <span>or continue with</span>
+        </div>
+        <button type="button" class="btn btn-google" id="signup-google">
+          <span class="google-icon">G</span>
+          Continue with Google
+        </button>
+        <p class="auth-switch">
+          Already have an account? <button type="button" class="auth-switch-btn" data-auth="signin">Sign In</button>
+        </p>
+      </form>
+      <div class="auth-error" id="signup-error" role="alert"></div>
+    </div>
+  </div>
+
+
+  <!-- Landing page JavaScript -->
+  <script type="module" src="./src/js/landing.js"></script>
+</body>
+</html>
